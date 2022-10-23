@@ -165,14 +165,14 @@ _have_configfs() {
 }
 
 # Check if the specified kernel config files are available.
-_have_kernel_config_file() {
-	if [[ ! -f /proc/config.gz && ! -f /boot/config-$(uname -r) ]]; then
-		SKIP_REASONS+=("kernel $(uname -r) config not found")
-		return 1
-	fi
+#_have_kernel_config_file() {
+#	if [[ ! -f /proc/config.gz && ! -f /boot/config-$(uname -r) ]]; then
+#		SKIP_REASONS+=("kernel $(uname -r) config not found")
+#		return 1
+#	fi
 
-	return 0
-}
+#	return 0
+#}
 
 # Check if the specified kernel option is defined.
 _check_kernel_option() {
